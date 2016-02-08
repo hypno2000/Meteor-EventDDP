@@ -6,17 +6,11 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-
   api.versionsFrom('1.0');
-
   api.use(['underscore', 'ddp', 'raix:eventemitter@0.1.2']);
-
-  api.use(['random', 'minimongo'], 'server')
-
+  api.use(['random', 'minimongo', 'check'], 'server')
   api.addFiles('eventddp.common.js', ['client', 'server']);
-
   api.addFiles('eventddp.client.js', 'client');
-
   api.addFiles('eventddp.server.js', 'server');
 
   api.export('EventDDP')
